@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "g++.exe build active file",
+      "command": "${workspaceFolder}/binary-tree",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/binary-tree"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/binary-tree"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "g++ build & run active file",
+      "command": "${workspaceFolder}/binary-tree",
+      "args": [
+        "${file}",
+        "-o",
+        "${workspaceFolder}/binary-tree"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/binary-tree"
+      }
+    }
+  ],
+  "version":"2.0.0"
+}
