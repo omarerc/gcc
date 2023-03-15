@@ -3,6 +3,7 @@
 
 int main(int argc, char *argv[])
 {
+  printf("Printing Message:\n");
   if (argc > 0)
   {
     for (int i = 0; i++; i < argc)
