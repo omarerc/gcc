@@ -9,11 +9,11 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/binary-tree",
-      "args": [],
+      "args": ["Hola mundo!", "Omar Ramirez"],
       "stopAtEntry": true,
       "cwd": ".",
       "environment": [],
-      "externalConsole": true, //set to true to see output in cmd instead
+      "externalConsole": false, //set to true to see output in cmd instead
       "MIMode": "gdb",
       "setupCommands": [
         {
