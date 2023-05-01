@@ -1,0 +1,1 @@
+This is a FileSurfingTest to verify if I can write into a file text.
