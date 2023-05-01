@@ -1,7 +1,7 @@
-all: binary-tree
+all: compile-project
 
 #print-hash: print-hash.c
 #	gcc -g print-hash.c -o ./print-hash
 
-binary-tree: binary-tree.c
-	gcc -g binary-tree.c -o ./binary-tree
+compile-project: contacts.c
+	gcc -g contacts.c -o ./contacts
