@@ -57,6 +57,7 @@ int main()
   strcpy(c3->firstName, "");
   strcpy(c3->lastName, "");
 
+  // Clear stdin buffer
   while ((getchar()) != '\n');
 
   // Third Contact Scan
