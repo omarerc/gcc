@@ -24,7 +24,12 @@ int main() {
 
   }
 
+  printf("-- In Order --\n");
   trace_inorder(root, printValue);
+  printf("-- Pre Order --\n");
+  trace_preorder(root, printValue);
+  printf("-- Post Order --\n");
+  trace_postorder(root, printValue);
 
   free(root);
 

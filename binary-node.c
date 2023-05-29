@@ -51,3 +51,29 @@ void trace_inorder(struct BinaryNode *r, void (*f)(struct BinaryNode *n)) {
     trace_inorder(r->rightChild, f);
   
 }
+
+// Trace Tree in Pre-Order and Execute the function passes like an argument
+void trace_preorder(struct BinaryNode *r, void (*f)(struct BinaryNode *n)) {
+  
+  f(r);
+
+  if (r->leftChild != NULL)
+    trace_preorder(r->leftChild, f);
+
+  if (r->rightChild != NULL)
+    trace_preorder(r->rightChild, f);
+  
+}
+
+// Trace Tree in Post-Order and Execute the function passes like an argument
+void trace_postorder(struct BinaryNode *r, void (*f)(struct BinaryNode *n)) {
+
+  if (r->leftChild != NULL)
+    trace_postorder(r->leftChild, f);
+
+  if (r->rightChild != NULL)
+    trace_postorder(r->rightChild, f);
+
+  f(r);
+  
+}
