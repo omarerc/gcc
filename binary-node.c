@@ -1,5 +1,6 @@
 /* binary-node.c */
 #include <stdio.h>
+#include <stdlib.h>
 #include "binary-node.h"
 
 // Struct Definition
@@ -76,4 +77,22 @@ void trace_postorder(struct BinaryNode *r, void (*f)(struct BinaryNode *n)) {
 
   f(r);
   
+}
+
+// Clean node memory
+void release_node(struct BinaryNode *r) {
+  if (r->Value != NULL)
+    free(r->Value);
+
+  if (r->leftChild != NULL)
+    free(r->leftChild);
+
+  if (r->rightChild != NULL)
+    free(r->rightChild);
+}
+
+// Release Dynamic Memory used in the tree
+void clean_tree(struct BinaryNode *r)
+{
+  trace_postorder(r, release_node);
 }

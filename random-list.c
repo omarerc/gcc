@@ -31,7 +31,7 @@ int main() {
   printf("-- Post Order --\n");
   trace_postorder(root, printValue);
 
-  free(root);
+  clean_tree(root);
 
   return 0;
 }
