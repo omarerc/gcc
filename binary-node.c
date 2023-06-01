@@ -10,6 +10,8 @@
 //  struct BinaryNode *rightChild;
 //};
 
+const int NOT_FOUND = -1;
+
 // Insert new node into the tree.
 struct BinaryNode * insert(struct BinaryNode *r, struct BinaryNode *n) {
 
@@ -39,6 +41,28 @@ struct BinaryNode * insert(struct BinaryNode *r, struct BinaryNode *n) {
   // Not insertion happends
   return NULL;
 };
+
+// Find position of the Key
+int find_value(struct BinaryNode *r, int key) {
+
+  // Count Loop
+  int result = 0;
+  
+  while (r != NULL) {
+    if (r != NULL) {
+      if (key == *r->Value)
+        return result;
+      else if (key < *r->Value)
+        r = r->leftChild;
+      else if (key > *r->Value)
+        r = r->rightChild;
+
+      result++;
+    }
+  }
+
+  return  NOT_FOUND;
+}
 
 // Trace Tree in Order and Execute the function passes like an argument
 void trace_inorder(struct BinaryNode *r, void (*f)(struct BinaryNode *n)) {

@@ -31,6 +31,16 @@ int main() {
   printf("-- Post Order --\n");
   trace_postorder(root, printValue);
 
+  int k;
+
+  printf("Key: ");
+  scanf("%d", &k);
+  int index = find_value(root, k);
+  if (index == NOT_FOUND)
+    printf("Value not in the list.");
+  else
+    printf("The index of the element is %d.\n", index);
+
   clean_tree(root);
 
   return 0;
